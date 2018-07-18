@@ -41,6 +41,7 @@ Most rules accept an object as an argument with some custom configuration:
 Parameter | Type | Description
 ----- | ----- | -----
 message | string | The displayed error message
+customEmpty | any, array<any> | custom value or an array of values that should be considered "empty"
 onlyIf | function | A function that receives 2 parameters, the first one is the value of the equivalent key on the data object, the second is the whole data object, it should return a boolean value  that confirms if the required rule is applied
 
 ### strLength
