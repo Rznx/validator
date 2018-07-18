@@ -3,9 +3,9 @@ import { validationFactory, successResult, errorResult } from 'core';
 const strLength = (cfg) => {
   const defaultCfg = {
     minLength: null,
-    minMessage: 'O campo deve ter ao menos {value} caracteres',
+    minMessage: 'Input must be at least {value} characters long',
     maxLength: null,
-    maxMessage: 'O campo deve ter no máximo {value} caracteres'
+    maxMessage: 'Input exceeded the limit of {value} characters'
   };
 
   const finalCfg = Object.assign({}, defaultCfg, cfg);

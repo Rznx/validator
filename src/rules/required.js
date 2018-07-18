@@ -3,30 +3,27 @@ import { isArray, isEmpty } from 'utils';
 
 const required = (cfg) => {
   const defaultCfg = {
-    message: 'O campo é obrigatório',
-    searchId: null,
-    richText: null,
+    message: 'Field is required',
+    customEmpty: null,
     onlyIf: (value, data) => true,
   };
 
   const finalCfg = Object.assign({}, defaultCfg, cfg);
 
   return validationFactory('required', (value, data) => {
-    let finalValue = (finalCfg.searchId ? data[finalCfg.searchId] : value);
 
-    if (!finalCfg.onlyIf(finalValue, data)) {
+    if (!finalCfg.onlyIf(value, data)) {
       return successResult();
     }
 
-    if (isArray(finalValue) && isEmpty(finalValue)) {
+    if (isArray(value) && isEmpty(value)) {
       return errorResult(finalCfg.message);
     }
-    if (finalCfg.richText) {
-      const emptyRichText1 = '<p><br></p>';
-      const emptyRichText2 = '<p></p>';
+    if (finalCfg.customEmpty) {
+      const checkCustom = (isArray(finalCfg.customEmpty) ? finalCfg.customEmpty : [finalCfg.customEmpty]);
 
-      if (finalValue === emptyRichText1 || finalValue === emptyRichText2) {
-        finalValue = '';
+      if (checkCustom.indexOf(value) !== -1) {
+        value = '';
       }
     }
     
@@ -34,7 +31,7 @@ const required = (cfg) => {
       value !== null && value !== undefined && value !== '';
 
     return (
-      checkValue(finalValue)
+      checkValue(value)
         ? successResult()
         : errorResult(finalCfg.message));
   });
