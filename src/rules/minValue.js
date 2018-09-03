@@ -3,7 +3,7 @@ import { validationFactory, successResult, errorResult } from 'core';
 const minValue = (cfg) => {
   const defaultCfg = {
     value: 1,
-    message: 'O valor minímo é {value}'
+    message: 'Minimium value accepted is {value}'
   };
 
   const finalCfg = Object.assign({}, defaultCfg);
@@ -20,7 +20,7 @@ const minValue = (cfg) => {
     }
 
     if (isNaN(parseInt(value, 10))) {
-      return errorResult("O valor informado necessita ser um número.");
+      return errorResult("Value must be a number");
     }
 
     if (value < finalCfg.value) {

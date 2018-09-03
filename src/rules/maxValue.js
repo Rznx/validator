@@ -3,7 +3,7 @@ import { validationFactory, successResult, errorResult } from 'core';
 const maxValue = (cfg) => {
   const defaultCfg = {
     value: 1,
-    message: 'O valor máximo é {value}'
+    message: 'Maximum value accepted is {value}'
   };
 
   const finalCfg = Object.assign({}, defaultCfg);
@@ -20,7 +20,7 @@ const maxValue = (cfg) => {
     }
 
     if (isNaN(parseInt(value, 10))) {
-      return errorResult("O valor informádo necessita ser um número.");
+      return errorResult("Value must be a number");
     }
 
     if (value > finalCfg.value) {

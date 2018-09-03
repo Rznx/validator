@@ -2,7 +2,7 @@ import { validationFactory, successResult, errorResult } from 'core';
 
 const email = (cfg) => {
   const defaultCfg = {
-    message: 'Inválid e-mail'
+    message: 'Invalid e-mail'
   };
 
   const regex = /^[a-z0-9\u007F-\uffff!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9\u007F-\uffff!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z]{2,}$/i;
