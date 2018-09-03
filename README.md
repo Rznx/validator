@@ -5,7 +5,7 @@ This package is a simple and lightweight object validation in node.js, react.js,
 ## Instalation
 
 ```
-npm install hzob-validation --save
+npm install hzob-validator --save
 ```
 
 
@@ -13,7 +13,7 @@ npm install hzob-validation --save
 It's really simple to get started, just import the `validator` function along with some rules, and you are ready to go!
 
 ```javascript
-import { validator, required, minValue } from "hzob-validation";
+import { validator, required, minValue } from "hzob-validator";
 
 const myData = {
   "name": "John Doe",
