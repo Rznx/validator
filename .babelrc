@@ -2,7 +2,9 @@
   "env": {
     "test": {
 
-      "presets": ["env"],
+      "presets": [
+        ["env"]
+      ],
 
       "plugins": [
         ["module-resolver", {

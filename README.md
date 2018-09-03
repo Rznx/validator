@@ -5,7 +5,7 @@ This package is a simple and lightweight object validation in node.js, react.js,
 ## Instalation
 
 ```
-npm install hzob-validator --save
+npm install hzob-validation --save
 ```
 
 

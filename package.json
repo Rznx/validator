@@ -1,8 +1,8 @@
 {
   "name": "hzob-validation",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Javascript Object/primitive validation",
-  "main": "dist/main.js",
+  "main": "src/main.js",
   "scripts": {
     "test": "jest",
     "clean": "rimraf dist",
@@ -33,5 +33,9 @@
     "rimraf": "^2.6.2",
     "webpack": "^4.16.1",
     "webpack-cli": "^3.0.8"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5"
   }
 }
