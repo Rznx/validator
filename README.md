@@ -1,11 +1,11 @@
-# Hzob Validator
+# RZN Validator
 
 This package is a simple and lightweight object validation in node.js, react.js, angular or any other javascript project that uses es6 modules.
 
 ## Instalation
 
 ```
-npm install hzob-validator --save
+npm install rzn-validator --save
 ```
 
 
@@ -13,7 +13,7 @@ npm install hzob-validator --save
 It's really simple to get started, just import the `validator` function along with some rules, and you are ready to go!
 
 ```javascript
-import { validator, required, minValue } from "hzob-validator";
+import { validator, required, minValue } from "rzn-validator";
 
 const myData = {
   "name": "John Doe",
